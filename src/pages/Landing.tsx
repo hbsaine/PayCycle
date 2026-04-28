@@ -80,6 +80,12 @@ export function Landing() {
         </section>
 
       </div>
+
+      {/* ── Attribution footer ── */}
+      <footer className="landing-attribution">
+        Built by Habib Saine &amp; Sumika Thapa &middot; BAIS 3300 &middot; Spring 2026 &middot; University of Iowa
+      </footer>
+
     </div>
   )
 }
