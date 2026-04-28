@@ -34,7 +34,11 @@ export function Dashboard() {
         {/* ── Header ── */}
         <header className="dashboard-header">
           <h1 className="dashboard-welcome">
-            {profile?.name ? `Welcome back, ${profile.name}` : 'Welcome back!'}
+            {profile?.name ? (
+              <>Welcome back, <span>{profile.name}</span></>
+            ) : (
+              'Welcome back!'
+            )}
           </h1>
           <button
             className="btn btn-ghost btn-sm"
@@ -51,19 +55,17 @@ export function Dashboard() {
         )}
 
         {!loading && error && (
-          <p className="text-sm dashboard-error" role="alert">
-            {error}
-          </p>
+          <p className="dashboard-error" role="alert">{error}</p>
         )}
 
         {!loading && !error && (
           <>
             {/* ── Total Balance ── */}
-            <div className="card balance-card">
+            <div className="balance-card">
               <p className="balance-label">Total Balance</p>
               <p className="balance-value">{fmt.format(totalBalance)}</p>
               {totalBalance === 0 && (
-                <p className="text-muted text-sm balance-hint">
+                <p className="balance-hint">
                   Add your first paycheck to get started
                 </p>
               )}
@@ -73,7 +75,7 @@ export function Dashboard() {
             <section aria-label="Spending categories">
               <div className="category-grid">
                 {CATEGORIES.map(({ key, label, colorClass }) => (
-                  <div key={key} className={`card category-card ${colorClass}`}>
+                  <div key={key} className={`category-card ${colorClass}`}>
                     <p className="category-label">{label}</p>
                     <p className="category-value">
                       {fmt.format(categoryTotals[key])}

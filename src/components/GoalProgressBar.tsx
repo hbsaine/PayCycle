@@ -12,7 +12,7 @@ export function GoalProgressBar({ saved, goal }: GoalProgressBarProps) {
   return (
     <div className="goal-progress-bar">
       <div className="goal-progress-labels">
-        <span className="text-sm">
+        <span className="text-sm text-muted">
           Saved {fmt.format(saved)} of {fmt.format(goal)}
         </span>
         <span className="text-sm font-medium">{pctRounded}%</span>

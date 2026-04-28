@@ -29,7 +29,6 @@ export function Login() {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>()
 
-  // Already logged in → go straight to dashboard
   useEffect(() => {
     if (session) navigate('/dashboard', { replace: true })
   }, [session, navigate])
@@ -93,6 +92,7 @@ export function Login() {
                 type="text"
                 className="input"
                 autoComplete="name"
+                placeholder="Your name"
                 aria-invalid={errors.name ? 'true' : 'false'}
                 aria-describedby={errors.name ? 'name-error' : undefined}
                 {...register('name', { required: 'Name is required' })}
@@ -112,6 +112,7 @@ export function Login() {
               type="email"
               className="input"
               autoComplete={mode === 'signin' ? 'username' : 'email'}
+              placeholder="you@example.com"
               aria-invalid={errors.email ? 'true' : 'false'}
               aria-describedby={errors.email ? 'email-error' : undefined}
               {...register('email', {
@@ -136,6 +137,7 @@ export function Login() {
               type="password"
               className="input"
               autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
+              placeholder={mode === 'signup' ? 'At least 6 characters' : '••••••••'}
               aria-invalid={errors.password ? 'true' : 'false'}
               aria-describedby={errors.password ? 'password-error' : undefined}
               {...register('password', {
@@ -172,7 +174,7 @@ export function Login() {
           </button>
         </form>
 
-        {/* ── Forgot password (sign-in mode only) ── */}
+        {/* ── Forgot password ── */}
         {mode === 'signin' && !showForgot && (
           <button
             type="button"
@@ -192,12 +194,13 @@ export function Login() {
             ) : (
               <>
                 <div className="form-group">
-                  <label htmlFor="forgot-email">Enter your email address</label>
+                  <label htmlFor="forgot-email">Your email address</label>
                   <input
                     id="forgot-email"
                     type="email"
                     className="input"
                     autoComplete="email"
+                    placeholder="you@example.com"
                     value={forgotEmail}
                     onChange={e => setForgotEmail(e.target.value)}
                   />

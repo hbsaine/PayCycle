@@ -25,7 +25,7 @@ export function Landing() {
 
         {/* ── Hero ── */}
         <section className="landing-hero">
-          <span className="logo-wordmark landing-wordmark" aria-label="PayCycle">
+          <span className="landing-wordmark" aria-label="PayCycle">
             PayCycle
           </span>
           <h1 className="landing-headline">Make every paycheck count.</h1>
@@ -62,11 +62,11 @@ export function Landing() {
         {/* ── Who It's For ── */}
         <section className="landing-who" aria-labelledby="who-heading">
           <h2 id="who-heading" className="landing-section-title">
-            Who it's for
+            Who it&apos;s for
           </h2>
-          <p className="landing-who-text text-muted text-sm">
+          <p className="landing-who-text text-muted">
             Built for college students who want clarity over their money without
-            the headache of full-blown budgeting apps. If you've ever wondered
+            the headache of full-blown budgeting apps. If you&apos;ve ever wondered
             where your paycheck went, PayCycle is for you.
           </p>
         </section>
@@ -79,13 +79,12 @@ export function Landing() {
           </Link>
         </section>
 
+        {/* ── Attribution ── */}
+        <footer className="landing-attribution">
+          Built by Habib Saine &amp; Sumika Thapa &middot; BAIS 3300 &middot; Spring 2026 &middot; University of Iowa
+        </footer>
+
       </div>
-
-      {/* ── Attribution footer ── */}
-      <footer className="landing-attribution">
-        Built by Habib Saine &amp; Sumika Thapa &middot; BAIS 3300 &middot; Spring 2026 &middot; University of Iowa
-      </footer>
-
     </div>
   )
 }
