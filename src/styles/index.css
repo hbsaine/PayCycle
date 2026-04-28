@@ -344,3 +344,287 @@ label {
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* ── Button size modifier ────────────────────────────── */
+.btn-sm {
+  padding: 0.4rem 0.875rem;
+  font-size: 0.875rem;
+  width: auto;
+}
+
+/* ── Dashboard ───────────────────────────────────────── */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 0.5rem;
+}
+
+.dashboard-welcome {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-error {
+  color: var(--color-error);
+  padding: 0.5rem 0;
+}
+
+/* Balance card */
+.balance-card {
+  margin-bottom: 1rem;
+  padding: 1.25rem 1rem;
+}
+
+.balance-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.balance-value {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.balance-hint {
+  margin-top: 0.4rem;
+}
+
+/* Category grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.category-card {
+  padding: 0.875rem;
+}
+
+.category-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+
+.category-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Category tints — subtle, accessible backgrounds */
+.cat-needs {
+  background: #eff6ff;   /* blue-50  */
+}
+.cat-needs .category-label  { color: #1e40af; }
+.cat-needs .category-value  { color: #1e3a8a; }
+
+.cat-wants {
+  background: #fffbeb;   /* amber-50 */
+}
+.cat-wants .category-label  { color: #92400e; }
+.cat-wants .category-value  { color: #78350f; }
+
+.cat-savings {
+  background: var(--color-primary-light);  /* green-100 */
+}
+.cat-savings .category-label  { color: var(--color-primary-text); }
+.cat-savings .category-value  { color: var(--color-primary-dark); }
+
+.cat-investments {
+  background: #f5f3ff;   /* violet-50 */
+}
+.cat-investments .category-label  { color: #5b21b6; }
+.cat-investments .category-value  { color: #4c1d95; }
+
+/* Goal section */
+.goal-section {
+  margin-bottom: 1rem;
+}
+
+.goal-heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.goal-progress-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.goal-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.goal-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.goal-set-btn {
+  width: 100%;
+}
+
+/* Quick actions */
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.25rem;
+}
+
+/* ── Landing page ────────────────────────────────────── */
+.landing-shell {
+  background: var(--color-surface);
+}
+
+.landing-content {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.landing-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  background: linear-gradient(160deg, var(--color-primary-light) 0%, var(--color-surface) 60%);
+}
+
+.landing-wordmark {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.landing-headline {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 0.875rem;
+}
+
+.landing-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  max-width: 34ch;
+}
+
+.landing-cta {
+  max-width: 220px;
+}
+
+/* How it works */
+.landing-steps {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.landing-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
+}
+
+.step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.step-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Who it's for */
+.landing-who {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.landing-who-text {
+  line-height: 1.65;
+}
+
+/* Footer CTA */
+.landing-footer-cta {
+  margin-top: auto;
+  padding: 2rem 1.5rem calc(2rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  background: var(--color-bg);
+}
+
+.landing-footer-tagline {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
