@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { LegalFooter } from '../components/LegalFooter'
 
 const STEPS = [
   {
@@ -71,6 +72,62 @@ export function Landing() {
           </p>
         </section>
 
+        {/* ── Meet the Team ── */}
+        <section className="landing-team" aria-labelledby="team-heading">
+          <h2 id="team-heading" className="landing-section-title">
+            Meet the team
+          </h2>
+          <div className="team-cards">
+            {/* Habib Saine */}
+            <article className="team-card">
+              <div className="team-avatar team-avatar-hs" aria-hidden="true">HS</div>
+              <p className="team-name">Habib Saine</p>
+              <p className="team-role">Co-founder &amp; Developer</p>
+              <p className="team-blurb">
+                Business Analytics student at the University of Iowa, Tippie College of
+                Business. Passionate about fintech and helping students take control of their
+                finances.
+              </p>
+              <nav className="team-links" aria-label="Habib Saine links">
+                <a
+                  href="https://linkedin.com/in/habibsaine/"
+                  className="team-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/hbsaine"
+                  className="team-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a href="#" className="team-link">
+                  Resume
+                </a>
+              </nav>
+            </article>
+
+            {/* Sumika Thapa */}
+            <article className="team-card">
+              <div className="team-avatar team-avatar-st" aria-hidden="true">ST</div>
+              <p className="team-name">Sumika Thapa</p>
+              <p className="team-role">Co-founder &amp; Product Manager</p>
+              <p className="team-blurb">
+                Business Analytics student at the University of Iowa. Focused on user
+                experience and product strategy.
+              </p>
+              <nav className="team-links" aria-label="Sumika Thapa links">
+                <a href="#" className="team-link">LinkedIn</a>
+                <a href="#" className="team-link">GitHub</a>
+              </nav>
+            </article>
+          </div>
+        </section>
+
         {/* ── Footer CTA ── */}
         <section className="landing-footer-cta" aria-label="Call to action">
           <p className="landing-footer-tagline">Ready to take control?</p>
@@ -78,6 +135,9 @@ export function Landing() {
             Get Started
           </Link>
         </section>
+
+        {/* ── Legal Footer ── */}
+        <LegalFooter />
 
         {/* ── Attribution ── */}
         <footer className="landing-attribution">

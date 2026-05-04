@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext'
 import { supabase } from '../lib/supabase'
 import { BottomNav } from '../components/BottomNav'
 import { GoalProgressBar } from '../components/GoalProgressBar'
+import { LegalFooter } from '../components/LegalFooter'
 import { useDashboardData } from '../hooks/useDashboardData'
 
 const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
@@ -117,6 +118,7 @@ export function Dashboard() {
           </>
         )}
 
+        <LegalFooter />
       </div>
       <BottomNav />
     </div>
