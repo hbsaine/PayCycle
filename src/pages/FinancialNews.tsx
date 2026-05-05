@@ -29,11 +29,13 @@ export function FinancialNews() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                {article.imageUrl && (
-                  <div className="news-card-image-container">
+                <div className="news-card-image-container">
+                  {article.imageUrl ? (
                     <img src={article.imageUrl} alt="" className="news-card-image" loading="lazy" />
-                  </div>
-                )}
+                  ) : (
+                    <div className="news-placeholder">PayCycle</div>
+                  )}
+                </div>
                 <div className="news-card-content">
                   <div className="news-meta">
                     <span className="news-source">{article.source}</span>
