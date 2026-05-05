@@ -84,9 +84,9 @@ export function Landing() {
               <p className="team-name">Habib Saine</p>
               <p className="team-role">Co-founder &amp; Developer</p>
               <p className="team-blurb">
-                Business Analytics student at the University of Iowa, Tippie College of
-                Business. Passionate about fintech and helping students take control of their
-                finances.
+                Business Analytics and Information Systems student at the University of Iowa.
+                Passionate about fintech, event-sourcing architecture, and building systems
+                that empower student financial health.
               </p>
               <nav className="team-links" aria-label="Habib Saine links">
                 <a
@@ -105,7 +105,12 @@ export function Landing() {
                 >
                   GitHub
                 </a>
-                <a href="#" className="team-link">
+                <a
+                  href="/resume-habib.pdf"
+                  className="team-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Resume
                 </a>
               </nav>
@@ -117,12 +122,35 @@ export function Landing() {
               <p className="team-name">Sumika Thapa</p>
               <p className="team-role">Co-founder &amp; Product Manager</p>
               <p className="team-blurb">
-                Business Analytics student at the University of Iowa. Focused on user
-                experience and product strategy.
+                Business Analytics student at the University of Iowa. Experienced in
+                marketing consulting and product strategy, with a focus on data-driven
+                recommendations and user-centric design.
               </p>
               <nav className="team-links" aria-label="Sumika Thapa links">
-                <a href="#" className="team-link">LinkedIn</a>
-                <a href="#" className="team-link">GitHub</a>
+                <a
+                  href="https://www.linkedin.com/in/sumika-thapa-30a0562b5/"
+                  className="team-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/sumikatthapa"
+                  className="team-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="/resume-sumika.pdf"
+                  className="team-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
               </nav>
             </article>
           </div>
